@@ -23,12 +23,14 @@ export class AlunoEdicaoComponent implements OnInit {
   buscaCep = async (numCep) => {
     const result = await this.http.get<any>(`${environment.server_url}/cep/${numCep}`).toPromise()
     try {
-      this.aluno.endereco = result.result[0].end
-      this.aluno.numero = result.result[0].numero
-      this.aluno.complemento = result.result[0].complemento2
-      this.aluno.bairro = result.result[0].bairro
-      this.aluno.cidade = result.result[0].cidade
-      this.aluno.uf = result.result[0].uf
+      if (result.result){
+        this.aluno.endereco = result.result[0].end
+        this.aluno.numero = result.result[0].numero
+        this.aluno.complemento = result.result[0].complemento2
+        this.aluno.bairro = result.result[0].bairro
+        this.aluno.cidade = result.result[0].cidade
+        this.aluno.uf = result.result[0].uf
+      }
     } catch (error) {
       console.log('error', error)
     }    

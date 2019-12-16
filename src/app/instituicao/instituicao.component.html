@@ -1,21 +1,24 @@
 <h5>Cadastro de Instituições</h5>
 <table class="table table-striped">
-    <thead>
-        <tr>
-            <th scope="col" class="center">ID</th>
-            <th scope="col">Nome</th>
-            <th scope="col">CNPJ</th>
-            <th scope="col" class="center">Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let instituicao of instituicoes">
-            <td class="center">{{ instituicao.id }} </td>
-            <td>{{ instituicao.nome }} </td>
-            <td>{{ instituicao.cnpj }}</td>
-            <td [ngClass]="{'red' : instituicao.status==0, 'green' : instituicao.status==1} " class="center">
-                {{ instituicao.status == 1 ? "Ativo" : "Inativo" }}
-            </td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th scope="col" class="center">ID</th>
+      <th scope="col">Nome</th>
+      <th scope="col">CNPJ</th>
+      <th scope="col" class="center">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="col" colspan="4" class="center red">{{messages}}</td>
+    </tr>
+    <tr *ngFor="let instituicao of instituicoes">
+      <td class="center">{{ instituicao.id }} </td>
+      <td>{{ instituicao.nome }} </td>
+      <td>{{ instituicao.cnpj }}</td>
+      <td *ngIf="instituicao.status" [ngClass]="{'red' : instituicao.status==0, 'green' : instituicao.status==1} " class="center">
+        {{ instituicao.status == 1 ? "Ativo" : "Inativo" }}
+      </td>
+    </tr>
+  </tbody>
 </table>

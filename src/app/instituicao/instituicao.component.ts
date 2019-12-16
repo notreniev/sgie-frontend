@@ -1,6 +1,6 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-instituicao',
@@ -10,16 +10,21 @@ import { HttpClient } from '@angular/common/http';
 export class InstituicaoComponent implements OnInit {
 
   instituicoes = [{}]
-  
+  messages
+
   constructor(private http: HttpClient) { }
 
-  getListainstituicoes = () => {
-    const lista = this.http.get<any>(`${environment.server_url}/instituicao`)
-    lista.subscribe(instituicoes => {
-      this.instituicoes =instituicoes
-    })
+  getListainstituicoes = async () => {
+    let header: HttpHeaders = new HttpHeaders().set('Content-Type', 'application/json')
+    try {
+      const lista = this.http.get<any>(`${environment.server_url}/instituicao`)
+      this.instituicoes = await lista.toPromise()
+    } catch (error) {
+      this.messages = error.status === 404 ? "Nenhum registro encontrado" : ""
+    }
   }
 
   ngOnInit() {
-    this.getListainstituicoes()}
+    this.getListainstituicoes()
+  }
 }

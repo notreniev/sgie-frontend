@@ -1,0 +1,21 @@
+<h5>Cadastro de Cursos</h5>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col" class="center">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Duração</th>
+            <th scope="col" class="center">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let curso of cursos">
+            <td class="center">{{ curso.id }} </td>
+            <td>{{ curso.nome }} </td>
+            <td>{{ curso.duracao }}</td>
+            <td [ngClass]="{'red' : curso.status==0, 'green' : curso.status==1} " class="center">
+                {{ curso.status == 1 ? "Ativo" : "Inativo"}}
+            </td>
+        </tr>
+    </tbody>
+</table>

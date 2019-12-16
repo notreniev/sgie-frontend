@@ -23,6 +23,7 @@ export class AlunoEdicaoComponent implements OnInit {
   buscaCep = async (numCep) => {
     const result = await this.http.get<any>(`${environment.server_url}/cep/${numCep}`).toPromise()
     try {
+      console.log(result.result)
       if (result.result){
         this.aluno.endereco = result.result[0].end
         this.aluno.numero = result.result[0].numero

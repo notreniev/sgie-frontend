@@ -14,7 +14,11 @@
     </tr>
     <tr *ngFor="let instituicao of instituicoes">
       <td class="center">{{ instituicao.id }} </td>
-      <td>{{ instituicao.nome }} </td>
+      <td>
+        <a href="/instituicao/{{instituicao.id}}">
+          {{ instituicao.nome }}
+        </a>
+      </td>
       <td>{{ instituicao.cnpj }}</td>
       <td *ngIf="instituicao.status" [ngClass]="{'red' : instituicao.status==0, 'green' : instituicao.status==1} " class="center">
         {{ instituicao.status == 1 ? "Ativo" : "Inativo" }}

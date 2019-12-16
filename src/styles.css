@@ -1,73 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
-.jumbotron{
-    margin-top: 1%;
-    margin-bottom: 0% !important;
-    padding: 4% !important;
+.jumbotron {
+  margin-top: 1%;
+  margin-bottom: 0% !important;
+  padding: 4% !important;
 }
 
-.jumbotron{
+.jumbotron {
   background-image: url('./app/images/library.jpeg');
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
-.nav{
-    position: relative;
-    top: auto;
-    padding-top: 0%;
-    margin-top: 0px;
-    margin-bottom: 2% !important;
+.nav {
+  position: relative;
+  top: auto;
+  padding-top: 0%;
+  margin-top: 0px;
+  margin-bottom: 2% !important;
 }
 
-.nav-background-color{
-    background-color: green;
-    color: white;
+.nav-background-color {
+  background-color: green;
+  color: white;
 }
 
-.nav-link, a:link {
-    color: white !important;
-}
-  
-  /* visited link */
-  a:visited {
-    color: white;
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: chartreuse !important;
-  }
-  
-  /* selected link */
-  /* a:active {
-    color: blue;
-  } */
-
-.table{
-    margin-top: 2%;
+/* visited link */
+a:visited, a:active, a:link {
+  color: blue;
 }
 
-.site-footer{
-    position: relative;
-    color: #1b1b32;
-    background: #eeeef0;
-    line-height: 1.6
+/* mouse over link */
+a:hover {
+  color: blue !important;
 }
-.footer-container{
-    margin-right: auto;
-    margin-left: auto;
-    padding: 40px 15px;
-    font-size: 15px;
-    overflow-x: hidden;
+
+
+/* visited link */
+a.nav-link:visited {
+  color: white !important;
 }
+
+a.nav-link:active {
+  color: white !important;
+}
+
+a.nav-link:link {
+  color: white !important;
+}
+
+/* mouse over link */
+a.nav-link:hover {
+  color: greenyellow !important;
+}
+
+
+.table {
+  margin-top: 2%;
+}
+
+.site-footer {
+  position: relative;
+  color: #1b1b32;
+  background: #eeeef0;
+  line-height: 1.6
+}
+
+.footer-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 40px 15px;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
 .footer-row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
 }
 
 .red {
@@ -78,6 +91,6 @@
   color: green;
 }
 
-.center{
+.center {
   text-align: center;
 }

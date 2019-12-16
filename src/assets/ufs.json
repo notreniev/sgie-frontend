@@ -1,0 +1,191 @@
+[
+    {
+      "siglaUf": "AC",
+      "chaveUfDne": 1,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "ACRE",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "AL",
+      "chaveUfDne": 2,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "ALAGOAS",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "AP",
+      "chaveUfDne": 3,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "AMAPA",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "AM",
+      "chaveUfDne": 4,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "AMAZONAS",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "BA",
+      "chaveUfDne": 5,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "BAHIA",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "CE",
+      "chaveUfDne": 6,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "CEARA",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "DF",
+      "chaveUfDne": 7,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "DISTRITO FEDERAL",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "ES",
+      "chaveUfDne": 8,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "ESPIRITO SANTO",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "GO",
+      "chaveUfDne": 10,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "GOIAS",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "MA",
+      "chaveUfDne": 11,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "MARANHAO",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "MT",
+      "chaveUfDne": 12,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "MATO GROSSO",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "MS",
+      "chaveUfDne": 13,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "MATO GROSSO DO SUL",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "MG",
+      "chaveUfDne": 14,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "MINAS GERAIS",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "PA",
+      "chaveUfDne": 15,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "PARA",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "PB",
+      "chaveUfDne": 16,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "PARAIBA",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "PR",
+      "chaveUfDne": 17,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "PARANA",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "PE",
+      "chaveUfDne": 18,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "PERNAMBUCO",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "PI",
+      "chaveUfDne": 19,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "PIAUI",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "RJ",
+      "chaveUfDne": 20,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "RIO DE JANEIRO",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "RN",
+      "chaveUfDne": 21,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "RIO GRANDE DO NORTE",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "RS",
+      "chaveUfDne": 22,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "RIO GRANDE DO SUL",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "RO",
+      "chaveUfDne": 23,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "RONDONIA",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "RR",
+      "chaveUfDne": 9,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "RORAIMA",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "SC",
+      "chaveUfDne": 25,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "SANTA CATARINA",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "SP",
+      "chaveUfDne": 26,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "SAO PAULO",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "SE",
+      "chaveUfDne": 27,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "SERGIPE",
+      "abrevUfRecEct": null
+    },
+    {
+      "siglaUf": "TO",
+      "chaveUfDne": 24,
+      "siglaPais1": "BR",
+      "nomeOficialUf": "TOCANTINS",
+      "abrevUfRecEct": null
+    }
+  ]

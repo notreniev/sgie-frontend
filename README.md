@@ -18,4 +18,3 @@ Esta aplicação depende do backend SIGIE-BACKEND disponível nesta URL:
 
 https://github.com/notreniev/sigie-backend
 
-git sta

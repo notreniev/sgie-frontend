@@ -1,27 +1,18 @@
 # Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
+Este projeto foi desenvolvimento em Angular 8 e serve de frontend para a aplicação SIGIE de Gerenciamento de Instituições de Ensino
+
+Para rodar esta aplicação rodar o comando:
+
+## docker-compose up
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Acessar o endereço `http://localhost:4201/` no seu navegador.
 
-## Code scaffolding
+## Atenção!
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Esta aplicação depende da aplicação SIGIE-BACKEND disponível nesta URL:
 
-## Build
+## https://github.com/notreniev/sigie-backend
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 
@@ -10,8 +10,11 @@ import { Router } from '@angular/router';
 })
 export class CursoComponent implements OnInit {
 
-  messages
+  @ViewChild('search', { static: false }) mySearch: ElementRef
   cursos = [{}]
+  filtro: string = undefined
+  messages
+
 
   constructor(
     private http: HttpClient,
@@ -33,6 +36,11 @@ export class CursoComponent implements OnInit {
 
   novo() {
     this.router.navigate(['/curso/add'])
+  }
+
+  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event: KeyboardEvent) {
+    this.mySearch.nativeElement.value = ""
+    this.filtro = undefined
   }
 
 }

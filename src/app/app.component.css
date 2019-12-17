@@ -1,0 +1,17 @@
+.banner{
+    background-color: black; 
+    color: white; 
+    padding: 1%; 
+    margin-bottom: 0px; 
+    display: block; 
+    opacity: 70%;
+}
+
+.banner-lead{
+    background-color: black; 
+    color: white; 
+    padding: 1%; 
+    margin-bottom: 0px; 
+    display: block; 
+    opacity: 70%;
+}

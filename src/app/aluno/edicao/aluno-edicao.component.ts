@@ -59,7 +59,7 @@ export class AlunoEdicaoComponent implements OnInit {
     let header: HttpHeaders = new HttpHeaders().set('Content-Type', 'application/json')
     
     const { id } = aluno
-    aluno.status = aluno.status != 0 ? 1 : 0
+    aluno.status = !aluno.status ? 0 : 1
     const params:any = { aluno: aluno }
 
     if (id && id != 'add'){

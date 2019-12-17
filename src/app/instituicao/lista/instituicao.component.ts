@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 
@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
 })
 export class InstituicaoComponent implements OnInit {
 
+  @ViewChild('search', { static: false }) mySearch: ElementRef
   instituicoes = [{}]
+  filtro: string = undefined
   messages
 
   constructor(
@@ -33,4 +35,10 @@ export class InstituicaoComponent implements OnInit {
   ngOnInit() {
     this.getListainstituicoes()
   }
+
+  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event: KeyboardEvent) {
+    this.mySearch.nativeElement.value = ""
+    this.filtro = undefined
+  }
+
 }

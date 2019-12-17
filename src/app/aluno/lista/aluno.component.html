@@ -26,11 +26,12 @@
       <th scope="col">CPF</th>
       <th scope="col">E-Mail</th>
       <th scope="col">Celular</th>
+      <th scope="col" class="center">Sttus</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td scope="col" colspan="4" class="center red">{{messages}}</td>
+      <td scope="col" colspan="6" class="center red">{{messages}}</td>
     </tr>
     <tr *ngFor="let aluno of alunos | search: filtro">
       <td>{{ aluno.id }} </td>
@@ -42,6 +43,9 @@
       <td>{{ aluno.cpf }}</td>
       <td>{{ aluno.email }}</td>
       <td>{{ aluno.celular }}</td>
+      <td [ngClass]="{'red' : aluno.status==0, 'green' : aluno.status==1} " class="center">
+        {{ aluno.status == 1 ? "Ativo" : "Inativo"}}
+      </td>
     </tr>
   </tbody>
 </table>

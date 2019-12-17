@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { MaskApplierService } from 'ngx-mask';
 
 @Component({
   selector: 'app-aluno-edicao',
@@ -19,7 +20,8 @@ export class AlunoEdicaoComponent implements OnInit {
   constructor(
     private http: HttpClient, 
     public activeRoute: ActivatedRoute,
-    private route: Router) {
+    private route: Router,
+    private mask: MaskApplierService) {
   }
 
   public getJSON(): Observable<any> {
@@ -30,7 +32,13 @@ export class AlunoEdicaoComponent implements OnInit {
     let id = this.activeRoute.snapshot.paramMap.get('id')
     if (id != 'add') {
       this.aluno = await this.http.get<any>(`${environment.server_url}/aluno/${id}`).toPromise()
+
+      //this.applyMasks()
     }
+  }
+
+  applyMasks = () => {
+    this.aluno.celular = this.mask.applyMask(this.aluno.celular, '(00) 9 9999-9999')
   }
 
   buscaCep = async (numCep) => {
@@ -112,7 +120,7 @@ export class AlunoEdicaoComponent implements OnInit {
     this.getJSON().subscribe(data => {
       this.ufs = data
     })
-
+    
     this.getDadosAluno()
   }
 

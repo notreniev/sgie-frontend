@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { AlunoEdicaoComponent } from './aluno/edicao/aluno-edicao.component';
 import { AlunoComponent } from './aluno/lista/aluno.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +15,7 @@ import { InstituicaoEdicaoComponent } from './instituicao/edicao/instituicao-edi
 import { InstituicaoComponent } from './instituicao/lista/instituicao.component';
 import { SearchPipe } from './pipes/search.pipe';
 
+export let options: Partial<IConfig> | (() => Partial<IConfig>);
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { SearchPipe } from './pipes/search.pipe';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    NgxMaskModule.forRoot(options)
   ],
   providers: [],
   bootstrap: [AppComponent]

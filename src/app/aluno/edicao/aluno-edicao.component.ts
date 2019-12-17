@@ -29,7 +29,6 @@ export class AlunoEdicaoComponent implements OnInit {
   getDadosAluno = async () => {
     let id = this.activeRoute.snapshot.paramMap.get('id')
     if (id != 'add') {
-      console.log(id)
       this.aluno = await this.http.get<any>(`${environment.server_url}/aluno/${id}`).toPromise()
     }
   }
@@ -60,32 +59,32 @@ export class AlunoEdicaoComponent implements OnInit {
     let header: HttpHeaders = new HttpHeaders().set('Content-Type', 'application/json')
     
     const { id } = aluno
-    const params = { aluno: aluno }
+    aluno.status = aluno.status != 0 ? 1 : 0
+    const params:any = { aluno: aluno }
 
-    if (id){
+    if (id && id != 'add'){
       await this.http.patch(`${environment.server_url}/aluno/${id}`, params, { headers: header }).toPromise()
       .then(() => {
-        console.log('Dados alterados com sucesso')
         this.message.success = 'Dados alterados com sucesso!!'
         setTimeout(() => {
           this.route.navigate(['/aluno'])
-        }, 3000)
+        }, environment.tempo_resposta)
       })
-      .catch(err => console.error('erro ao tentar alterar aluno', err))
+      .catch(err => {
+        console.error('Erro ao tentar alterar aluno', err)
+        this.message.error = 'Erro ao tentar alterar aluno!!'
+      })
     }else{
       await this.http.post(`${environment.server_url}/aluno`, params, { headers: header }).toPromise()
         .then(() => {
           this.message.success = 'Dados salvos com sucesso!!'
           setTimeout(() => {
             this.route.navigate(['/aluno'])
-          }, 3000)
-  
+          }, environment.tempo_resposta)
         })
         .catch(err => {
-          console.error('erro ao tentar salvar aluno', err)
-          setTimeout(() => {
-            this.message.error = 'Erro ao tentar salvar aluno!!'
-          }, 3000)          
+          console.error('Erro ao tentar salvar aluno', err)
+          this.message.error = 'Erro ao tentar salvar aluno!!'
         })
     }
   }
@@ -93,19 +92,15 @@ export class AlunoEdicaoComponent implements OnInit {
   delete = async (aluno) => {
     await this.http.delete(`${environment.server_url}/aluno/${aluno.id}`).toPromise()
     .then(() => {
-      console.log('Aluno deletado com sucesso')
       this.message.success = 'Aluno deletado com sucesso!!'
       setTimeout(() => {
         this.route.navigate(['/aluno'])
-      }, 3000)
+      }, environment.tempo_resposta)
 
     })
     .catch(err => {
       console.error('erro ao tentar deletar aluno', err)
-      setTimeout(() => {
-        this.message.error = 'Erro ao tentar deletar aluno!!'
-      }, 3000)          
-
+      this.message.error = 'Erro ao tentar deletar aluno!!'
     })
   }
 

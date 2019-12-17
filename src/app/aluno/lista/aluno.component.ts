@@ -13,20 +13,22 @@ export class AlunoComponent implements OnInit {
   @ViewChild('search', { static: false }) mySearch: ElementRef
   alunos = [{}]
   filtro: string = undefined
+  messages
   
   constructor(
     private http: HttpClient,
     private route: Router) { }
 
-  getListaAlunos = () => {
-    const lista = this.http.get<any>(`${environment.server_url}/aluno`)
-    lista.subscribe(alunos => {
-      this.alunos = alunos
-    })
+  getListaAlunos = async () => {
+      try {
+        const lista = this.http.get<any>(`${environment.server_url}/aluno`)
+        this.alunos = await lista.toPromise()
+      } catch (error) {
+        this.messages = error.status === 404 ? "Nenhum registro encontrado" : ""
+      }
   }
 
   novo(){
-    console.log('novo')
     this.route.navigate(['/aluno/add'])
   }
 

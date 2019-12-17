@@ -1,1 +1,61 @@
-<p>curso-edicao works!</p>
+<h5 class="display-5">Cadastro de Cursos</h5>
+<p class="lead">Edição</p>
+
+<hr>
+
+<div class="alert alert-success sticky-top" role="alert" *ngIf="message.success">
+    {{message.success}}
+</div>
+
+<div class="alert alert-danger sticky-top" role="alert" *ngIf="message.error">
+    {{message.error}}
+</div>
+
+<br>
+
+<form name="form" #form="ngForm">
+    <input [(ngModel)]="curso.id" type="hidden" id="id" name="id" value="curso.id">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="nome">Nome</label>
+            <input [(ngModel)]="curso.nome" type="text" class="form-control" id="nome" name="nome" placeholder="Nome"
+                required #nome="ngModel">
+            <div *ngIf="curso.invalid && (curso.dirty || curso.touched)" class="alert alert-danger">
+                <small *ngIf="curso.errors.required">Nome do curso é obrigatório</small>
+            </div>
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="duracao">Duração</label>
+            <input [(ngModel)]="curso.duracao" type="text" class="form-control" id="duracao" name="duracao"
+                placeholder="2 anos" required #duracao="ngModel">
+            <div *ngIf="duracao.invalid && (duracao.dirty || duracao.touched)" class="alert alert-danger">
+                <small *ngIf="duracao.errors.required">Duração do curso é obrigatória</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-2" style="padding-left: 2%">
+            <input type="checkbox" [(ngModel)]="curso.status" class="form-check-input" id="status" name="status" [checked]="curso.status===true">
+            <label for="status">Curso ativo</label>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="form-row">
+        <div class="form-group col-md-1">
+            <button type="submit" class="btn btn-primary" (click)="save(curso)" [disabled]="!form.valid">Salvar</button>
+        </div>
+        <div class="form-group col-md-1">
+            <button type="button" class="btn btn-danger" (click)="delete(curso)">Deletar</button>
+        </div>
+        <div class="form-group col-md-1">
+            <button type="button" class="btn btn-secondary" (click)="cancel()">Cancelar</button>
+        </div>
+    </div>
+
+</form>
+
+<br>

@@ -1,4 +1,21 @@
 <h5>Cadastro de Instituições</h5>
+<br>
+<div class="col-4">
+  <div class="form-inline float-left">
+    <div class="form-group">
+        <button type="button" class="btn btn-primary" (click)="novo()">Nova instituição</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-12">
+  <div class="form-inline float-right">
+    <div class="form-group mb-2">
+      <input id="search" #search type="text" class="form-control" [(ngModel)]="filtro" placeholder="Filtro" />
+    </div>
+  </div>
+</div>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -12,7 +29,7 @@
     <tr>
       <td scope="col" colspan="4" class="center red">{{messages}}</td>
     </tr>
-    <tr *ngFor="let instituicao of instituicoes">
+    <tr *ngFor="let instituicao of instituicoes | search: filtro">
       <td class="center">{{ instituicao.id }} </td>
       <td>
         <a href="/instituicao/{{instituicao.id}}">
@@ -20,7 +37,7 @@
         </a>
       </td>
       <td>{{ instituicao.cnpj }}</td>
-      <td *ngIf="instituicao.status" [ngClass]="{'red' : instituicao.status==0, 'green' : instituicao.status==1} " class="center">
+      <td [ngClass]="{'red' : instituicao.status==0, 'green' : instituicao.status==1} " class="center">
         {{ instituicao.status == 1 ? "Ativo" : "Inativo" }}
       </td>
     </tr>

@@ -1,4 +1,5 @@
 <h5>Cadastro de Alunos</h5>
+<br>
 
 <div class="col-4">
   <div class="form-inline float-left">
@@ -28,6 +29,9 @@
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td scope="col" colspan="4" class="center red">{{messages}}</td>
+    </tr>
     <tr *ngFor="let aluno of alunos | search: filtro">
       <td>{{ aluno.id }} </td>
       <td>

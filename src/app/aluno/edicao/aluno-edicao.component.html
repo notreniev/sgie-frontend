@@ -1,5 +1,6 @@
 <h5 class="display-5">Cadastro de Alunos</h5>
 <p class="lead">Edição</p>
+
 <hr>
 
 <div class="alert alert-success sticky-top" role="alert" *ngIf="message.success">
@@ -116,7 +117,8 @@
 
   <div class="form-row">
     <div class="form-group col-md-2" style="padding-left: 2%">
-      <label for="status"><input [(ngModel)]="aluno.status" type="checkbox" class="form-check-input" id="status" name="status" ng-checked="aluno.status"> Cadastro ativo</label>
+      <input type="checkbox" [(ngModel)]="aluno.status" class="form-check-input" id="status" name="status" [checked]="aluno.status===true"/>
+      <label for="status"> Cadastro ativo</label>
     </div>
   </div>
 

@@ -16,8 +16,10 @@ const routes: Routes = [
   { path: 'aluno/add', component: AlunoEdicaoComponent },
   { path: 'curso', component: CursoComponent },
   { path: 'curso/:id', component: CursoEdicaoComponent },
+  { path: 'curso/add', component: CursoEdicaoComponent },
   { path: 'instituicao', component: InstituicaoComponent },
-  { path: 'instituicao/:id', component: InstituicaoEdicaoComponent }
+  { path: 'instituicao/:id', component: InstituicaoEdicaoComponent },
+  { path: 'instituicao/add', component: InstituicaoEdicaoComponent }
 ];
 
 

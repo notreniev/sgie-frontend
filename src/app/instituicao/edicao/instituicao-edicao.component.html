@@ -4,57 +4,58 @@
 <hr>
 
 <div class="alert alert-success sticky-top" role="alert" *ngIf="message.success">
-    {{message.success}} <img src="/assets/loading.gif" width="4%"/>
+  {{message.success}} <img src="/assets/loading.gif" width="4%" />
 </div>
 
 <div class="alert alert-danger sticky-top" role="alert" *ngIf="message.error">
-    {{message.error}}
+  {{message.error}}
 </div>
 
 <br>
 
 <form name="form" #form="ngForm">
-    <input [(ngModel)]="instituicao.id" type="hidden" id="id" name="id" value="instituicao.id">
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="nome">Nome</label>
-            <input [(ngModel)]="instituicao.nome" type="text" class="form-control" id="nome" name="nome" placeholder="Nome"
-                required #nome="ngModel">
-            <div *ngIf="instituicao.invalid && (instituicao.dirty || instituicao.touched)" class="alert alert-danger">
-                <small *ngIf="instituicao.errors.required">Nome da Instituição é obrigatório</small>
-            </div>
-        </div>
-
-        <div class="form-group col-md-4">
-            <label for="cnpj">CNPJ</label>
-            <input [(ngModel)]="instituicao.cnpj" type="text" class="form-control" id="cnpj" name="cnpj"
-                placeholder="000000000/0001-00" required #cnpj="ngModel">
-            <div *ngIf="instituicao.invalid && (instituicao.dirty || instituicao.touched)" class="alert alert-danger">
-                <small *ngIf="instituicao.errors.required">CNPJ é obrigatório</small>
-            </div>
-        </div>
+  <input [(ngModel)]="instituicao.id" type="hidden" id="id" name="id" value="instituicao.id">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="nome">Nome</label>
+      <input [(ngModel)]="instituicao.nome" type="text" class="form-control" id="nome" name="nome" placeholder="Nome"
+        required #nome="ngModel">
+      <div *ngIf="nome.invalid && (nome.dirty || nome.touched)" class="alert alert-danger">
+        <small *ngIf="nome.errors.required">Nome da Instituição é obrigatório</small>
+      </div>
     </div>
 
-    <div class="form-row">
-        <div class="form-group col-md-2" style="padding-left: 2%">
-            <input type="checkbox" [(ngModel)]="instituicao.status" class="form-check-input" id="status" name="status" [checked]="instituicao.status">
-            <label for="status">Instituição ativa</label>
-        </div>
+    <div class="form-group col-md-4">
+      <label for="cnpj">CNPJ</label>
+      <input [(ngModel)]="instituicao.cnpj" type="text" class="form-control" id="cnpj" name="cnpj"
+        placeholder="000000000/0001-00" #cnpj="ngModel" required>
+      <div *ngIf="cnpj.invalid && (cnpj || cnpj.touched)" class="alert alert-danger">
+        <small *ngIf="cnpj.errors.required">CNPJ é obrigatório</small>
+      </div>
     </div>
+  </div>
 
-    <br>
-
-    <div class="form-row">
-        <div class="form-group col-md-1">
-            <button type="submit" class="btn btn-primary" (click)="save(instituicao)" [disabled]="!form.valid">Salvar</button>
-        </div>
-        <div class="form-group col-md-1">
-            <button type="button" class="btn btn-danger" (click)="delete(instituicao)">Deletar</button>
-        </div>
-        <div class="form-group col-md-1">
-            <button type="button" class="btn btn-secondary" (click)="cancel()">Cancelar</button>
-        </div>
+  <div class="form-row">
+    <div class="form-group col-md-2" style="padding-left: 2%">
+      <input type="checkbox" [(ngModel)]="instituicao.status" class="form-check-input" id="status" name="status"
+        [checked]="instituicao.status">
+      <label for="status">Instituição ativa</label>
     </div>
+  </div>
+
+  <br>
+
+  <div class="form-row">
+    <div class="form-group col-md-1">
+      <button type="submit" class="btn btn-primary" (click)="save(instituicao)" [disabled]="!form.valid">Salvar</button>
+    </div>
+    <div class="form-group col-md-1">
+      <button type="button" class="btn btn-danger" (click)="delete(instituicao)">Deletar</button>
+    </div>
+    <div class="form-group col-md-1">
+      <button type="button" class="btn btn-secondary" (click)="cancel()">Cancelar</button>
+    </div>
+  </div>
 
 </form>
 

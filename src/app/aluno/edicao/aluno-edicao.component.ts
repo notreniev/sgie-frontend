@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-aluno-edicao',
@@ -60,7 +60,7 @@ export class AlunoEdicaoComponent implements OnInit {
     
     const { id } = aluno
     aluno.status = !aluno.status ? 0 : 1
-    const params:any = { aluno: aluno }
+    const params = { aluno: aluno }
 
     if (id && id != 'add'){
       await this.http.patch(`${environment.server_url}/aluno/${id}`, params, { headers: header }).toPromise()

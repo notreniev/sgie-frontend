@@ -4,7 +4,9 @@ Este projeto foi desenvolvimento em Angular 8 e serve de frontend para a aplica�
 
 Para rodar esta aplicação rodar o comando:
 
-## docker-compose up
+```javascript
+docker-compose up
+```
 
 ## Development server
 

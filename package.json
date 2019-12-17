@@ -24,10 +24,16 @@
     "bootstrap": "^4.0.0",
     "component": "^1.1.0",
     "fstream": "^1.0.12",
+    "http-proxy-agent": "^2.1.0",
+    "https-proxy-agent": "^2.2.4",
+    "mime": "^1.4.1",
+    "minimatch": "^3.0.2",
     "ngx-mask": "^8.1.6",
+    "qs": "^1.0.0",
     "rxjs": "~6.4.0",
     "serialize-javascript": "^2.1.1",
     "superagent": "^3.7.0",
+    "tar": "^2.2.2",
     "tslib": "^1.9.0",
     "underscore.string": "^3.3.5",
     "zone.js": "~0.9.1"
@@ -64,5 +70,6 @@
   "bugs": {
     "url": "https://github.com/notreniev/sgie-frontend/issues"
   },
-  "homepage": "https://github.com/notreniev/sgie-frontend#readme"
+  "homepage": "https://github.com/notreniev/sgie-frontend#readme",
+  "keywords": []
 }

@@ -14,7 +14,7 @@ Acessar o endereço `http://localhost:4201/` no seu navegador.
 
 ## Atenção!
 
-Esta aplicação depende da aplicação SIGIE-BACKEND disponível nesta URL:
+Esta aplicação depende do backend SIGIE-BACKEND disponível nesta URL:
 
 ## https://github.com/notreniev/sigie-backend
 

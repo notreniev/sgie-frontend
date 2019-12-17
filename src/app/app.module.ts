@@ -12,6 +12,7 @@ import { CursoComponent } from './curso/lista/curso.component';
 import { HomeComponent } from './home/home.component';
 import { InstituicaoEdicaoComponent } from './instituicao/edicao/instituicao-edicao.component';
 import { InstituicaoComponent } from './instituicao/lista/instituicao.component';
+import { SearchPipe } from './pipes/search.pipe';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { InstituicaoComponent } from './instituicao/lista/instituicao.component'
     HomeComponent,
     AlunoEdicaoComponent,
     CursoEdicaoComponent,
-    InstituicaoEdicaoComponent
+    InstituicaoEdicaoComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

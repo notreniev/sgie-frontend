@@ -101,3 +101,20 @@ label{
 input {
   margin-bottom: 4% !important;
 }
+
+.input-bar {
+  display: table;
+  width: 100%;
+}
+
+.input-bar-item {
+  display: table-cell;
+}
+
+.input-bar-item > button {
+  margin-left: 5px;
+}
+
+.width100 {
+width: 100%;
+}

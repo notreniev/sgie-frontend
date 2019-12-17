@@ -1,4 +1,22 @@
 <h5>Cadastro de Alunos</h5>
+
+<div class="col-4">
+  <div class="form-inline float-left">
+    <div class="form-group">
+        <button type="button" class="btn btn-primary" (click)="novo()">Novo aluno</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-12">
+  <div class="form-inline float-right">
+    <div class="form-group mb-2">
+      <input id="search" #search type="text" class="form-control" [(ngModel)]="filtro" placeholder="Filtro" />
+    </div>
+  </div>
+</div>
+
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -10,7 +28,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let aluno of alunos">
+    <tr *ngFor="let aluno of alunos | search: filtro">
       <td>{{ aluno.id }} </td>
       <td>
         <a href="/aluno/{{aluno.id}}">

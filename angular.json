@@ -27,9 +27,7 @@
               "src/css/fontawesome-free/css/all.min.css",
               "src/css/sb-admin-2.min.css"
             ],
-            "scripts": [
-              "src/js/sb-admin-2.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {

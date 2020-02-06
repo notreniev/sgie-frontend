@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^8.2.14",
     "@angular/platform-browser-dynamic": "^8.2.14",
     "@angular/router": "^8.2.14",
+    "@ng-bootstrap/ng-bootstrap": "^5.2.1",
     "component": "^1.1.0",
     "fstream": "^1.0.12",
     "mime": "^1.6.0",

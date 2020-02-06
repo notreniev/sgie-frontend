@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { AlunoEdicaoComponent } from './aluno/edicao/aluno-edicao.component';
 import { AlunoComponent } from './aluno/lista/aluno.component';
@@ -33,6 +34,7 @@ export let options: Partial<IConfig> | (() => Partial<IConfig>);
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgbModule,
     NgxMaskModule.forRoot(options)
   ],
   providers: [],
